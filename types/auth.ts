@@ -7,15 +7,25 @@ export interface RegisterFormValues {
   email: string;
   password: string;
   confirmPassword: string;
-  firstName: string;
-  lastName: string;
 }
 
 export interface AuthUser {
   id: string;
   email: string;
+  firstName?: string;
+  lastName?: string;
+  phoneNumber?: string;
+  dateOfBirth?: string;
+  bio?: string;
+}
+
+export interface ProfileFormValues {
   firstName: string;
   lastName: string;
+  email: string;
+  phoneNumber: string;
+  dateOfBirth: string;
+  bio: string;
 }
 
 export interface AuthContextType {

@@ -23,8 +23,6 @@ export default function RegisterScreen() {
     const [isLoading, setIsLoading] = useState(false);
 
     const initialValues: RegisterFormValues = {
-        firstName: '',
-        lastName: '',
         email: '',
         password: '',
         confirmPassword: '',
@@ -90,28 +88,6 @@ export default function RegisterScreen() {
                                         dirty,
                                     }) => (
                                         <>
-                                            <View style={styles.nameRow}>
-                                                <Input
-                                                    placeholder="First Name"
-                                                    value={values.firstName}
-                                                    onChangeText={handleChange('firstName')}
-                                                    onBlur={handleBlur('firstName')}
-                                                    error={touched.firstName && errors.firstName ? errors.firstName : undefined}
-                                                    autoCapitalize="words"
-                                                    leftIcon="person-outline"
-                                                    style={styles.nameInput}
-                                                />
-                                                <Input
-                                                    placeholder="Last Name"
-                                                    value={values.lastName}
-                                                    onChangeText={handleChange('lastName')}
-                                                    onBlur={handleBlur('lastName')}
-                                                    error={touched.lastName && errors.lastName ? errors.lastName : undefined}
-                                                    autoCapitalize="words"
-                                                    style={styles.nameInput}
-                                                />
-                                            </View>
-
                                             <Input
                                                 placeholder="Email"
                                                 value={values.email}
@@ -220,13 +196,6 @@ const styles = StyleSheet.create({
     formContainer: {
         flex: 1,
         justifyContent: 'center',
-    },
-    nameRow: {
-        flexDirection: 'row',
-        gap: 12,
-    },
-    nameInput: {
-        flex: 1,
     },
     createButton: {
         marginTop: 8,
